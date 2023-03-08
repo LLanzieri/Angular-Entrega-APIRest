@@ -1,0 +1,118 @@
+<div class="container">
+
+    <div class="titulo">
+        <h1>Agregar nuevo alumno</h1>
+    </div>
+
+    <div class="info-container">
+
+        <div class="img-container">
+            <img src="../../../../assets/add-group.png" alt="">
+        </div>
+
+        <div class="formulario-container">
+            <form [formGroup]="formularioAgregarAlumno" (submit)="agregarAlumno()">
+
+                <div class="field-container">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>DNI</mat-label>
+                        <input matInput formControlName="dni">
+
+                        <mat-error
+                            *ngIf="this.formularioAgregarAlumno.controls['dni'].dirty && this.formularioAgregarAlumno.controls['dni'].errors?.['required']">
+                            Campo obligatorio
+                        </mat-error>
+
+                        <mat-error
+                            *ngIf="this.formularioAgregarAlumno.controls['dni'].dirty && formularioAgregarAlumno.controls['dni'].errors?.['pattern']">
+                            Ingresar solamente números
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="nombre">
+
+                    <mat-error
+                        *ngIf="this.formularioAgregarAlumno.controls['nombre'].dirty && this.formularioAgregarAlumno.controls['nombre'].errors?.['required']">
+                        Campo obligatorio
+                    </mat-error>
+
+                    <mat-error
+                        *ngIf="this.formularioAgregarAlumno.controls['nombre'].dirty && formularioAgregarAlumno.controls['nombre'].errors?.['pattern']">
+                        Ingresar solamente letras
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Apellido</mat-label>
+                    <input matInput formControlName="apellido">
+
+                    <mat-error
+                        *ngIf="this.formularioAgregarAlumno.controls['apellido'].dirty && this.formularioAgregarAlumno.controls['apellido'].errors?.['required']">
+                        Campo obligatorio
+                    </mat-error>
+
+                    <mat-error
+                        *ngIf="this.formularioAgregarAlumno.controls['apellido'].dirty && formularioAgregarAlumno.controls['apellido'].errors?.['pattern']">
+                        Ingresar solamente letras
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Edad</mat-label>
+                    <input matInput formControlName="edad">
+
+                    <mat-error
+                        *ngIf="this.formularioAgregarAlumno.controls['edad'].dirty && this.formularioAgregarAlumno.controls['edad'].errors?.['required']">
+                        Campo obligatorio
+                    </mat-error>
+
+                    <mat-error
+                        *ngIf="this.formularioAgregarAlumno.controls['edad'].dirty && formularioAgregarAlumno.controls['edad'].errors?.['pattern']">
+                        Formato permitido: 2 dígitos
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Nota 1</mat-label>
+                    <mat-select formControlName="nota1">
+                        <mat-option *ngFor="let opcion of notas" [value]="opcion.valor">
+                            {{opcion.textoDesplegado}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Nota 2</mat-label>
+                    <mat-select formControlName="nota2">
+                        <mat-option *ngFor="let opcion of notas" [value]="opcion.valor">
+                            {{opcion.textoDesplegado}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Estado Curso</mat-label>
+                    <mat-select formControlName="cursoAprobado">
+                        <mat-option *ngFor="let opcion of opciones" [value]="opcion.valor">
+                            {{opcion.textoDesplegado}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="btn-container">
+                    <button mat-raised-button color="primary" type="submit">
+                        <mat-icon>person_add</mat-icon>
+                        Agregar alumno
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+</div>

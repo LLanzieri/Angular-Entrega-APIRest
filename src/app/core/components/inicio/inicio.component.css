@@ -1,0 +1,36 @@
+.container{
+    /* border: 1px solid blue; */
+    margin: 20px auto;
+}
+
+.info-container{
+    /* border: 1px solid red; */
+    display: flex;
+    margin: 20px;
+}
+
+.logo-container{
+    border: 1px solid black;
+    width: 30%;
+    margin: 20px;
+}
+
+.logo-container img{
+    width: 100%;
+}
+
+.titulo-container{
+    /* border: 1px solid purple; */
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+h1{
+    font-weight: bold;
+}
+
+.btn-container{
+    margin: 20px;
+}

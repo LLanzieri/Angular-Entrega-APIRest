@@ -1,0 +1,17 @@
+<ng-container>
+    <mat-toolbar class="toolbar" *ngIf="sesion$ | async as variableSesion">
+        <button mat-icon-button class="gap" color="primary" (click)="toggleMenu()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span appFormatoTitulo>Plataforma Educativa</span>
+        <span class="example-spacer"></span>
+
+        <button mat-raised-button color="primary" routerLink="auth/login" *ngIf="!variableSesion.sesionActiva">
+            <mat-icon>account_circle</mat-icon> Ingresar
+        </button>
+
+        <button mat-raised-button color="primary" *ngIf="variableSesion.sesionActiva" (click)="cerrarSesion()">
+            <mat-icon>logout</mat-icon> Cerrar sesión
+        </button>
+    </mat-toolbar>
+</ng-container>

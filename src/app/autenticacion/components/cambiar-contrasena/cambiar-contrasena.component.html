@@ -1,0 +1,36 @@
+<div class="img-container">
+    <img src="../../../../assets/MiListaLogo.PNG" alt="">
+</div>
+
+<div class="form-container">
+    <div class="titulo2">
+        <h1>Ingrese su usuario y nueva contraseña</h1>
+        <div class="titulo2">
+            <h2>Restablecer contraseña</h2>
+        </div>
+    </div>
+    <form [formGroup]="nuevaContrasenaForm">
+        <div class="example-container">
+
+            <mat-form-field class="field-container">
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field class="field-container">
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+
+            <div class="btn-container">
+                <button [disabled]="!nuevaContrasenaForm.valid" mat-raised-button color="primary" mat-button
+                    (click)="actualizarContrasena()">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="hipervinculos">
+
+    <h2>¿Necesitas crear tu usuario? <a href="auth/crearusuario">HACE CLICK AQUÍ</a></h2>
+
+    <h2><a href="">Volver al Inicio</a></h2>
+</div>

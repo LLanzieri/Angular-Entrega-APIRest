@@ -1,0 +1,37 @@
+<h1>Modificar calificaciones</h1>
+
+<div class="table-container">
+    <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="Alumno">
+            <th mat-header-cell *matHeaderCellDef appFormatoTitulo>Alumno</th>
+            <td mat-cell *matCellDef="let item">{{item | formatearNombreApellido: item.nombre:item.apellido}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Nota 1">
+            <th mat-header-cell *matHeaderCellDef appFormatoTitulo>Nota 1</th>
+            <td mat-cell *matCellDef="let item">{{item.nota1}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Nota 2">
+            <th mat-header-cell *matHeaderCellDef appFormatoTitulo>Nota 2</th>
+            <td mat-cell *matCellDef="let item">{{item.nota2}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Modificar notas">
+            <th mat-header-cell *matHeaderCellDef appFormatoTitulo>Modificar notas</th>
+            <td mat-cell *matCellDef="let element">
+
+                <button mat-icon-button color="primary" (click)="modificarNotas(element)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+        <tr mat-row *matRowDef="let row; columns:columnas"></tr>
+    </table>
+</div>

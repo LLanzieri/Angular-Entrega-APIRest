@@ -1,0 +1,50 @@
+<div class="info-container">
+
+    <h1>Información del alumno</h1>
+    <h2>- Nombre y apellido: {{nombreAlumno}} {{apellidoAlumno}}</h2>
+    <h2>- Edad: {{edad}}</h2>
+
+    <div class="img-container">
+        <img src={{urlFoto}} alt="">
+
+    </div>
+
+    <div class="formulario-container">
+        <form [formGroup]="formularioAgregarAlumno" (submit)="editarNotas()">
+
+            <div class="notas-container">
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Nota 1</mat-label>
+                    <mat-select formControlName="nota1">
+                        <mat-option *ngFor="let opcion of notas" [value]="opcion.valor">
+                            {{opcion.textoDesplegado}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Nota 2</mat-label>
+                    <mat-select formControlName="nota2">
+                        <mat-option *ngFor="let opcion of notas" [value]="opcion.valor">
+                            {{opcion.textoDesplegado}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </div>
+
+            <div class="btn-container">
+                <button mat-raised-button color="primary" type="submit" class="boton">
+                    <mat-icon>edit</mat-icon>
+                    Modificar notas
+                </button>
+                <button mat-raised-button color="primary" (click)="volverAtras()" class="boton">
+                    <mat-icon>arrow_back</mat-icon>
+                    Volver
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>

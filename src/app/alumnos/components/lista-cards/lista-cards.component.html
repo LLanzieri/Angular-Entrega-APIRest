@@ -1,0 +1,28 @@
+<h1>Lista de alumnos</h1>
+<div class="cards-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let item of listaAlumnos$ | async">
+
+                <mat-card class="example-card">
+                    <mat-card-header class="header-card">
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{item.nombre}} {{item.apellido}}</mat-card-title>
+
+                    </mat-card-header>
+                    <div class="img-container">
+                        <img mat-card-image src={{item.urlFoto}} alt="Foto del jugador">
+                    </div>
+
+                    <mat-card-content>
+                        <ul>
+                            <li>Nota 1: {{item.nota1}}</li>
+                            <li>Nota 2: {{item.nota2}}</li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+
+            </div>
+        </div>
+    </div>
+</div>

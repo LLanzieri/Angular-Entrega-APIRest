@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" class="desplegable" [(opened)]="estadoMenuNav">
+        <mat-nav-list class="lista">
+
+            <div class="entrada">
+                <a mat-list-item routerLink="home">Inicio</a>
+            </div>
+            <div class="entrada">
+                <a mat-list-item routerLink="alumnos/lista">Mis Alumnos</a>
+            </div>
+            <div class="entrada">
+                <a mat-list-item routerLink="alumnos/datos">Datos</a>
+            </div>
+            <div class="entrada">
+                <a mat-list-item routerLink="alumnos/calificaciones">Calificaciones</a>
+            </div>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="contenido">
+
+        <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

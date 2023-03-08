@@ -1,0 +1,65 @@
+.form-container {
+    /* border: 1px solid red; */
+    margin: auto;
+    padding: 15px;
+    margin: 15px;
+}
+
+.example-container {
+    border: 1px solid black;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: #c0c0bd;
+}
+
+.titulo2 {
+    margin: auto;
+}
+
+h1 {
+
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    /* border: 1px solid red; */
+    padding: 15px;
+}
+
+.img-container {
+    /* border: 1px solid purple; */
+    width: 20%;
+    margin: 20px auto;
+    border: 1px solid rgb(3, 153, 163)
+}
+
+.img-container img {
+    width: 100%;
+    border: 1px solid rgb(3, 153, 163)
+}
+
+.field-container {
+    /* border: 1px solid blue; */
+    width: 100%;
+    padding: 10px;
+}
+
+.btn-container {
+    /* border: 1px solid purple; */
+    margin: 10px;
+    text-align: center;
+}
+
+.hipervinculos {
+    margin: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    padding: 5px;
+}
